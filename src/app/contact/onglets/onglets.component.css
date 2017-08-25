@@ -1,0 +1,21 @@
+div.contact{
+    width:100%;
+}
+
+ul.onglets{
+    width:100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+ul.onglets li{
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    flex-direction: line;
+    justify-content: center;
+    align-items: center;
+}
+
+div#phone{
+    font-size:30px;
+}

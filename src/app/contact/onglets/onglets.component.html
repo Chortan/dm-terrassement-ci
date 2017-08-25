@@ -1,0 +1,23 @@
+<div class="row contact">
+  <div class="col s12">
+    <ul class="onglets">
+      <li class="col s3 center {{view==0 ? 'active white' : 'grey'}}" (click)="view=0"><a><i class="fa fa-envelope"></i></a></li>
+      <li class="col s3 center {{view==1 ? 'active white' : 'grey'}}" (click)="view=1"><a><i class="fa fa-phone"></i></a></li>
+    </ul>
+  </div>
+  <div id="mail" class="col s12 contact" *ngIf="view==0">
+    <h5 class="center">Contactez nous par e-mail</h5>
+    <p class="center">Une réponse rapide !</p>
+    <!-- Dropdown Trigger -->
+    <a materialize="dropdown" class='dropdown-button btn blue' data-activates='dropdown1'>{{motif}}</a>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li *ngFor="let motif of motifs" (click)="onChange(motif)"><a>{{motif}}</a></li>
+    </ul>
+    <a *ngIf="motif!=textInitial" href="mailto:david.muller10@free.fr?subject={{motif}}"><div class="waves-effect blue white-text linkMail"><i class="fa fa-envelope"></i> david.muller10@free.fr</div></a>
+  </div>
+  
+  <div id="phone" class="col s12" *ngIf="view==1">
+    <p>+33 (0) 6 81 06 76 55</p>
+  </div>
+</div>
